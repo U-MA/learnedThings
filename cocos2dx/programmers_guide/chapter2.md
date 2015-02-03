@@ -49,3 +49,29 @@ scene->addChild(label_node);
 scene->addChild(sprite_node, 1);
 ```
 
+## Sprite
+
+Spriteは, スクリーン内を動くオブジェクト  
+操作できる  
+動かないオブジェクトはNodeである  
+Spriteは作成が簡単であり, position, rotation, scale, opacity, colorなどの操作可能なpropertyを持つ
+```C++
+// This is how to create a sprite
+auto mySprite = Sprite::create("mysprite.png");
+
+// this is how to change the properties of the sprite
+mySprite->setPosition((Vec2(500, 0));
+
+mySprite->setRotation(40);
+
+mySprite->setScale(2.0); // sets scale X and Y uniformly
+
+mySprite->setAnchorPoint(Vec2(0, 0));
+```
+
+すべてのNodeオブジェクトはanchor pointの値を持つ  
+Node: SpriteはNodeのサブクラスである  
+anchor pointはSpriteのどの部分がpositionを設定するときに使われるのかを明記する方法と考えられる  
+anchor pointを(0, 0)にするとSpriteの左下にanchorが置かれる？  
+
+## Actions
