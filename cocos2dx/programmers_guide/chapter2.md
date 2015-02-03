@@ -75,3 +75,48 @@ anchor pointはSpriteのどの部分がpositionを設定するときに使われ
 anchor pointを(0, 0)にするとSpriteの左下にanchorが置かれる？  
 
 ## Actions
+
+MoveBy, Rotate, Scale and so on.
+```C++
+
+auto mySprite = Sprite::create("Bule_Front1.png");
+
+// Move a sprite 50 pixels to the right, and 10 pixels to the top over 2 seconds.
+auto moveBy = MoveBy::create(2, Vec2(50, 10));
+mySprite->runAction(moveBy);
+
+// Move a sprite to a specific location over 2 seconds.
+auto moveTo = MoveTo::create(2, Vec2(50, 10));
+mySprite->runAction(moveTo);
+```
+
+## Sequence and Spawns
+
+Sequenceは特定の順番での複数のActionの実行である  
+```C++
+auto mySprite = Node::create();
+
+// move to point 50,10 over 2 seconds
+auto moveTo1 = MoveTo::create(2, Vec2(50, 10));
+
+// move from current position by 100,10 over 2 seconds
+auto moveBy1 = MoveBy::create(2, Vec2(150, 10));
+
+// create a delay
+auto delay = DelayTime::create(1);
+
+mySprite->runAction(Sequence::create(moveTo1, delay, moveBy1, delay->clone(), moveTo2, nullptr));
+```
+
+Spawnは同時にすべてのActionを実行する  
+```C++
+auto myNode = Node::create();
+
+auto moveTo1 = MoveTo::create(2, Vec2(50, 10));
+auto moveBy1 = MoveBy::create(2, Vec2(100, 10));
+auto moveTo2 = MoveTo::create(2, Vec2(150, 10));
+
+myNode->runAction(Spawn::create(moveTo1, moveBy1, moveTo2, nullptr));
+```
+
+## Parent Child RElationship
