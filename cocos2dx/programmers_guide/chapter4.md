@@ -225,3 +225,52 @@ mySprite->runActions(mySpawn);
 mySprite->runAction(moveBy);
 mySprite->runAction(fadeTo);
 ```
+
+```C++
+// create a Sprite
+auto mySprite = Sprite::create("mysprite.png");
+
+// create a few Actions
+auto moveBy = MoveBy::create(10, Vec2(400, 100));
+auto fadeTo = FadeTo::create(2.0f, 120.0f);
+auto scaleBy = ScaleBy::create(2.0f, 3.0f);
+
+// create a Spawn to use
+auto mySpawn = Spawn::createWithTwoActions(scaleBy, fadeTo);
+
+// tie everything together in a sequence
+auto seq = Seequence::create(moveBy, mySpawn, moveBy, nullptr);
+
+// run it
+mySprite->runAction(seq);
+```
+
+### Reverse
+
+```C++
+//reverse a sequence, spawn or action
+mySprite->runAction(mySpawn->reverse());
+```
+
+```C++
+// create a Sprite
+auto mySprite = Sprite::create("mysprite.png");
+mySprite->setPosition(50, 56);
+
+// create a few Actions
+auto moveBy = MoveBy::create(2.0f, Vec2(500, 0));
+auto scaleBy = ScaleBy::create(2.0f, 2.0f);
+auto delay = DelayTime::create(2.0f);
+
+// create a sequence
+auto delaySequence = Sequence::create(delay, delay->clone(), delay->clone(),
+                                      delay->clone(), nullptr);
+
+auto sequence = Sequence::create(moveBy, delay, scaleBy, delaySequence, nullptr);
+
+// run it
+newSprite2->runAction(sequence);
+
+// reverse it
+newSprite2->runAction(sequence->reverse());
+```
