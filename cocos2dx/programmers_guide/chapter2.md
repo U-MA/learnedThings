@@ -120,3 +120,20 @@ myNode->runAction(Spawn::create(moveTo1, moveBy1, moveTo2, nullptr));
 ```
 
 ## Parent Child RElationship
+
+Cocos2d-xはParent and Child relationshipを使用している  
+これは, 親ノードへのpropertyや変更が, その子ノードにも適用される  
+
+```C++
+auto myNode = Node::create();
+
+// rotating by setting
+myNode->setRotation(50);
+```
+
+```C++
+auto myNode = Node::create();
+
+// scaling by setting
+myNode->setScale(2.0); // scales uniformly by 2.0
+```
