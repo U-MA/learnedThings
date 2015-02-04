@@ -119,6 +119,7 @@ void AccelerometerTest::onAcceleration(Acceleration* acc, Event* event)
 
 ## Creating a mouse event
 
+```C++
 _mouseListener = EventListenerMouse::create();
 _mouseListener->onMouseMove = CC_CALLBACK_1(MouseTest::onMouseMove, this);
 _mouseListener->onMouseUp   = CC_CALLBACK_1(MouseTest::onMouseUp,   this);
