@@ -4,7 +4,7 @@
 template<int VT, bool RangeCheck, typename T, typename Comp>
 MGPU_DEVICE void
 SerialMerge(const T* keys_shared, int aBegin, int aEnd,
-            int bBegin, int bEnd, T* result, int* indices, Comp comp)
+            int bBegin, int bEnd, T* result, int* indices, Comp comp);
 ```
 
 普通のマージソート  
