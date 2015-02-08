@@ -14,6 +14,4 @@ keys_sharedに２つのソート済みの配列が格納されていることを
 格納されている  
 
 ２つの配列をマージした結果はresultに格納される 
-
-## TODO:
-indicesは何をしているか
+indicesは, sharedメモリ上のキーのindexを格納する  
