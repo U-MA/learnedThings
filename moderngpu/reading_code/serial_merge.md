@@ -1,4 +1,4 @@
-SerialMerge: device/ctamerge.cuh  
+## SerialMerge: device/ctamerge.cuh  
 
 ```C++
 template<int VT, bool RangeCheck, typename T, typename Comp>
@@ -15,4 +15,5 @@ keys_sharedに２つのソート済みの配列が格納されていることを
 
 ２つの配列をマージした結果はresultに格納される 
 
-TODO: indicesは何をしているか
+## TODO:
+indicesは何をしているか
