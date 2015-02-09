@@ -9,7 +9,7 @@ CTABlocksortPass(T* keys_shared, int tid, int count,
 
 マージされたキーとindicesを返す  
 
-(coop - 1) & tid  == tid % coop
+(coop - 1) & tid  == tid % coop  
 ~(coop - 1) & tid == coop x (tid / coop)
 
 MergePathを計算し, それを利用し二つの配列をマージ  
