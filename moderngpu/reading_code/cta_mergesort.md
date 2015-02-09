@@ -13,6 +13,6 @@ CTAMergesort(KeyType threadKeys[VT], ValType threadValues[VT],
 キーだけをソートしたい場合は, HasValueをfalseに, ValTypeをintに設定しておく  
 
 この関数の内容は次の通り  
-1. スレッド番号tidのレジスタに格納されている要素をOddEvenTransposeSortでソートしておく  
-2. ソートしたキーをレジスタからsharedメモリに移す  
-3. DeviceBlocksortLoopでCTA内の要素をソートする  
+  1. スレッド番号tidのレジスタに格納されている要素をOddEvenTransposeSortでソートしておく  
+  2. ソートしたキーをレジスタからsharedメモリに移す  
+  3. DeviceBlocksortLoopでCTA内の要素をソートする  
