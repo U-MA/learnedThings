@@ -15,5 +15,5 @@ CTAMergesort(KeyType threadKeys[VT], ValType threadValues[VT],
 この関数の内容は次の通り  
   1. スレッド番号tidのレジスタに格納されている要素をOddEvenTransposeSortでソートしておく  
   2. ソートしたキーをレジスタからsharedメモリに移す  
-    * この時点で, NT個ある各スレッドが責任を持つVT個の要素がソート済みにされてkeys_sharedに格納されている  
+    * NT個ある各スレッドが責任を持つVT個の要素がソート済みにされてkeys_sharedに格納される  
   3. DeviceBlocksortLoopでCTA内の要素をソートする  
