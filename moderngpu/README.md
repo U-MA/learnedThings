@@ -5,7 +5,8 @@ http://nvlabs.github.io/moderngpu/index.html
 ## License
 
 Modern GPUは3-clause BSDライセンス  
-条文はModernGPUの[Introduction](http://nvlabs.github.io/moderngpu/faq.html)からコピー
+条文はModernGPUの[Introduction](http://nvlabs.github.io/moderngpu/faq.html)からコピー  
+```
 /******************************************************************************
  * Copyright (c) 2013, NVIDIA CORPORATION.  All rights reserved.
  * 
@@ -32,3 +33,4 @@ Modern GPUは3-clause BSDライセンス
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
  ******************************************************************************/
+ ```
