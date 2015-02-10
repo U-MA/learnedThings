@@ -8,4 +8,4 @@ FindLog2(int x, bool roundUp = false);
 
 コメントの通り, log2(x)を求める関数  
 roundUp = trueのとき, 整数にまで丸めてくれる  
-すなわち, log2(10) = 3.321...なので, FindLog2(10, true) = 4ということだと思われる
+すなわち, `log2(10) = 3.321...`なので, `FindLog2(10, true) = 4`ということだと思われる
