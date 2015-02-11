@@ -2,7 +2,7 @@
 
 http://nvlabs.github.io/moderngpu/index.html
 
-## License
+## License of Modern GPU
 
 Modern GPUは3-clause BSDライセンス  
 条文はModernGPUの[Introduction](http://nvlabs.github.io/moderngpu/faq.html)からコピー  
