@@ -82,7 +82,7 @@ MGPU_HOST void Reduce(InputIt data_global, int count, T identity, Op op,
 * コンテキスト
 
 関数の処理の内容を大雑把に見ていくと  
-  1. reduce_globalが設定されていない時の処理.  
-     reduce_globalにデバイスメモリの領域を割り当てている  
-  2. KernelReduce関数の呼び出し.  
+  1. `reduce_global`が設定されていない時の処理.  
+     `reduce_global`にデバイスメモリの領域を割り当てている  
+  2. `KernelReduce`関数の呼び出し.  
 
